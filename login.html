@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LK TEXTILE</title>
+    <link rel="stylesheet" href="login style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="login-form">
+            <p class="title">Sign In</p>
+            <input required id="email" type="email" class="input" placeholder="E-mail">
+            <input required id="password" type="password" class="input" placeholder="Password">
+            <span class="forgot-password"><a href="#">Forgot Password?</a></span>
+            <button type="submit" class="login-button">Sign In</button>
+            <p class="p">Don't have an account? <a href="signup.html">Sign-up</a></p>
+        </form>
+    </div>
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+
+            const user = JSON.parse(localStorage.getItem("user"));
+
+            if (!user || user.email !== email || user.password !== password) {
+                alert("Invalid email or password.");
+                return;
+            }
+
+            alert("Login successful! Redirecting to homepage.");
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+
+</html>

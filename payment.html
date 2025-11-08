@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lk TEXTILE(GIRLS COLLECTION)</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    :root {
+      --primary-color: #1a1919;
+      --secondary-color: #f3961c;
+      --dark-color: #252525;
+      --white-color: #fff;
+      --light-gray-color: #f0eeee;
+      --site-max-width: 1300px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--white-color);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .section_container {
+      margin: 0 auto;
+      max-width: var(--site-max-width);
+    }
+
+    .section_title {
+      text-align: center;
+      padding: 60px 0 100px;
+      font-size: 32px;
+      font-family: "Righteous", sans-serif;
+      text-transform: uppercase;
+    }
+
+    .section_title::after {
+      content: '';
+      width: 80px;
+      background: var(--secondary-color);
+      height: 5px;
+      display: block;
+      margin: 7px auto 0;
+      border-radius: 8px;
+    }
+
+    header {
+      position: auto;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      background: var(--primary-color);
+    }
+
+    nav {
+      display: flex;
+      padding: 15px 0 15px 20px;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      max-width: var(--site-max-width);
+    }
+
+    nav .nav_logo a {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    nav .nav_logo a img {
+      max-width: 55px;
+    }
+
+    nav .nav_logo h2 {
+      color: var(--white-color);
+      font-weight: 600;
+      font-size: 32px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 10px;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 10px 25px;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--white-color);
+      border-radius: 30px;
+      transition: all 0.2s ease;
+    }
+
+    ul li {
+      display: inline-block;
+      position: relative;
+    }
+
+    ul li ul.dropdown li {
+      display: block;
+    }
+
+    ul li ul.dropdown {
+      width: 150%;
+      position: absolute;
+      z-index: 999;
+      display: none;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+    }
+
+    ul li:hover ul.dropdown {
+      display: block;
+    }
+
+    nav label {
+      font-size: 32px;
+      color: var(--white-color);
+      cursor: pointer;
+    }
+
+    label .menu_btn,
+    label .close_btn {
+      display: none;
+    }
+
+    #click {
+      display: none;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      align-items: center;
+      justify-content: center;
+      background-color: #f10d0d;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      background: #dbd9d9;
+      color: var(--dark-color);
+      padding: 60px 20px;
+    }
+
+    .footer_section {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer_section h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .footer_section .footer_logo a {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      color: var(--dark-color);
+    }
+
+    .footer_section .footer_logo a img {
+      max-width: 55px;
+    }
+
+    .footer_section .footer_logo a h2 {
+      font-weight: 600;
+    }
+
+    .footer_section .useful_links ul li {
+      margin: 20px 0;
+    }
+
+    .footer_section .useful_links ul li a {
+      color: var(--dark-color);
+      font-size: 17px;
+    }
+
+    .footer_section .useful_links ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer_section .contact_us ul li {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer_section .contact_us ul li i {
+      font-size: 25px;
+    }
+
+    .footer_section .contact_us ul li span {
+      font-size: 17px;
+    }
+
+    .footer_section .follow_us i {
+      font-size: 26px;
+      margin-right: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .footer_section .follow_us i:hover {
+      color: var(--secondary-color);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav_logo">
+        <a href="#">
+          <img src="images/logo.jpg" alt="lk TEXTILE" />
+          <h2>lk TEXTILE</h2>
+        </a>
+      </div>
+
+      <input type="checkbox" id="click" />
+      <label for="click">
+        <i class="menu_btn bx bx-menu"></i>
+        <i class="close_btn bx bx-x"></i>
+      </label>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li> <a href="ABOUT.html">About</a></li>
+        <li>
+          <a href="collection.html">Dress collection</a>
+          <ul class="dropdown">
+            <li><a href="#collection1">Saree</a></li>
+            <li><a href="#collection2">T-shirt</a></li>
+            <li><a href="#collection3">Party ware</a></li>
+            <li><a href="#collection4">Shirt</a></li>
+            <li><a href="#collection5">Night ware</a></li>
+            <li><a href="#collection6">Frock</a></li>
+          </ul>
+        </li>
+        <li><a href="payment.html">Payment</a></li>
+        <li><a href="us.html">Contact</a></li>
+        <li> <a href="logout.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <form action="php/Payment.php" method="POST" id="paymentForm">
+      <div class="form-group">
+        <label for="dressName">Dress Name:</label>
+        <input type="text" id="dressName" name="dressName" required readonly />
+      </div>
+      <div class="form-group">
+        <label for="productId">Product ID:</label>
+        <input type="text" id="productId" name="productId" required readonly />
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required readonly />
+      </div>
+      <div class="form-group">
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+          <option value="cash">Cash Payment</option>
+          <option value="card">Card Payment</option>
+        </select>
+      </div>
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="section_container">
+      <div class="footer_section">
+        <div class="footer_logo">
+          <a href="index.html">
+            <img src="images/logo.jpg" alt="lk Logo" />
+            <h2>lk TEXTILE</h2>
+          </a>
+        </div>
+
+        <div class="useful_links">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#about">About</a></li><br>
+            <li><a href="#Dress collection">Dress collection</a></li><br>
+            <li><a href="#Payment">Payment</a></li><br>
+            <li><a href="#contact">Contact</a></li><br>
+          </ul>
+        </div>
+
+        <div class="contact_us">
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              <i class="bx bx-current-location"></i>
+              <span>Jaffna, Srilanka</span>
+            </li>
+            <li>
+              <i class="bx bxs-phone-call"></i> <span>0212728239</span>
+            </li>
+            <li>
+              <i class="bx bxs-time-five"></i>
+              <span>Mon-Sun : 10:00 AM - 7:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="follow_us">
+          <h3>Follow</h3>
+          <i class="bx bxl-facebook-circle"></i>
+          <i class="bx bxl-twitter"></i>
+          <i class="bx bxl-instagram-alt"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function getURLParameter(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    window.addEventListener("DOMContentLoaded", function () {
+      const dressName = getURLParameter("product");
+      const productId = getURLParameter("id");
+      const price = getURLParameter("total");
+
+      if (dressName && productId && price) {
+        document.getElementById("dressName").value = dressName;
+        document.getElementById("productId").value = productId;
+        document.getElementById("price").value = price;
+      }
+    });
+  </script>
+</body>
+
+</html>
